@@ -170,12 +170,12 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span>
       </div>
       <div class="site-state-item site-state-tags">
@@ -196,6 +196,138 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://vigilux418.github.io/2025/04/05/%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="Vigilux">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Vigilux的小屋">
+      <meta itemprop="description" content="Vigilux">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | Vigilux的小屋">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2025/04/05/%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">电脑操作小技巧</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-04-05 23:05:58 / 修改时间：23:17:25" itemprop="dateCreated datePublished" datetime="2025-04-05T23:05:58+08:00">2025-04-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">电脑操作</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="电脑操作小技巧"><a href="#电脑操作小技巧" class="headerlink" title="电脑操作小技巧"></a>电脑操作小技巧</h1><h3 id="解决文件夹进程占用与权限问题"><a href="#解决文件夹进程占用与权限问题" class="headerlink" title="解决文件夹进程占用与权限问题"></a>解决文件夹进程占用与权限问题</h3><p>针对Windows 11家庭中文版中因<strong>进程占用</strong>或<strong>权限不足</strong>导致的文件夹删除难题，以下是结合系统原生命令的解决方案</p>
+<h4 id="一、终止占用文件的进程（可选）"><a href="#一、终止占用文件的进程（可选）" class="headerlink" title="一、终止占用文件的进程（可选）"></a>一、终止占用文件的进程（可选）</h4><p>如果文件夹被其他程序占用（如后台进程或病毒），需先终止相关进程：</p>
+<ol>
+<li><strong>通过任务管理器手动结束进程</strong>（常规操作）</li>
+</ol>
+<p>鼠标右键单击任务栏，点击任务管理器，进而在“进程”栏中搜索并结束任务</p>
+<ol start="2">
+<li><p><strong>命令行终止进程</strong>（需管理员权限）：</p>
+<blockquote>
+<p>按win+R，输入cmd，进而按Ctrl+Shift+Enter以管理员权限打开</p>
+</blockquote>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /im &quot;进程名.exe&quot;  </span><br></pre></td></tr></table></figure>
+
+<p><font color=red><em>示例：若资源管理器占用，可重启资源管理器</em></font></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">taskkill</span> /f /im explorer.exe &amp;&amp; <span class="built_in">start</span> explorer.exe  </span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="二、获取文件夹所有权并赋予完全控制权限"><a href="#二、获取文件夹所有权并赋予完全控制权限" class="headerlink" title="二、获取文件夹所有权并赋予完全控制权限"></a>二、获取文件夹所有权并赋予完全控制权限</h4><p>通过CMD管理员命令强制获取权限：</p>
+<ol>
+<li><p><strong>获取所有权</strong>：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">takeown /f &quot;文件夹路径&quot; /r /d y  </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>/r</code>：递归操作子文件</li>
+<li><code>/d y</code>：静默确认（无需交互）</li>
+</ul>
+</li>
+<li><p><strong>赋予管理员完全控制权限</strong>：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">icacls &quot;文件夹路径&quot; /grant Administrators:F /t  </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p><code>/grant Administrators:F</code>：授予管理员完全控制权</p>
+</li>
+<li><p><code>/t</code>：递归应用到子项</p>
+</li>
+</ul>
+</li>
+</ol>
+<h4 id="三、强制删除文件夹"><a href="#三、强制删除文件夹" class="headerlink" title="三、强制删除文件夹"></a>三、强制删除文件夹</h4><p><strong>CMD命令</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rd</span> /s /q &quot;文件夹路径&quot;  </span><br></pre></td></tr></table></figure>
+
+<p><strong>参数解析</strong>：</p>
+<ul>
+<li><code>/s</code>：删除文件夹及子内容</li>
+<li><code>/q</code>：静默模式（无确认提示）</li>
+</ul>
+<h4 id="Powershell指令"><a href="#Powershell指令" class="headerlink" title="Powershell指令"></a>Powershell指令</h4><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">takeown /f <span class="string">&quot;文件夹路径&quot;</span> /<span class="built_in">r</span> /d y  </span><br><span class="line">icacls <span class="string">&quot;文件夹路径&quot;</span> /grant Administrators:F /t  </span><br><span class="line"><span class="built_in">Remove-Item</span> <span class="literal">-Path</span> <span class="string">&quot;文件夹路径&quot;</span> <span class="literal">-Force</span> <span class="literal">-Recurse</span>  </span><br></pre></td></tr></table></figure>
+
+<h4 id="扩展：解决深层权限问题的进阶命令"><a href="#扩展：解决深层权限问题的进阶命令" class="headerlink" title="扩展：解决深层权限问题的进阶命令"></a>扩展：解决深层权限问题的进阶命令</h4><p>若上述步骤仍失败，可尝试<strong>重置权限继承</strong>（修复权限混乱）</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">icacls &quot;文件夹路径&quot; /reset /t /c /l  </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>/reset</code>：恢复默认权限</li>
+<li><code>/t</code>：递归操作子项</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -241,7 +373,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2025-04-05 22:56:39" itemprop="dateModified" datetime="2025-04-05T22:56:39+08:00">2025-04-05</time>
+      <time title="修改时间：2025-04-05 23:18:54" itemprop="dateModified" datetime="2025-04-05T23:18:54+08:00">2025-04-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -345,9 +477,6 @@
 </blockquote>
 </li>
 </ol>
-<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><ol>
-<li><strong>Git操作权限或网络连接中断</strong></li>
-</ol>
 <h3 id="本地预览博客"><a href="#本地预览博客" class="headerlink" title="本地预览博客"></a>本地预览博客</h3><ol>
 <li><p><strong>启动本地服务器</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
@@ -373,7 +502,7 @@
 <li><p><strong>访问在线博客</strong><br>稍等2分钟后，访问 <code>https://你的用户名.github.io</code> 即可看到你的博客。</p>
 </li>
 </ol>
-<h4 id="常见问题-1"><a href="#常见问题-1" class="headerlink" title="常见问题"></a>常见问题</h4><ol>
+<h4 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h4><ol>
 <li><h4 id="GitHub未正确识别SSH密钥，导致部署权限被拒绝（Permission-denied-publickey-）"><a href="#GitHub未正确识别SSH密钥，导致部署权限被拒绝（Permission-denied-publickey-）" class="headerlink" title="GitHub未正确识别SSH密钥，导致部署权限被拒绝（Permission denied (publickey)）"></a><strong>GitHub未正确识别SSH密钥</strong>，导致部署权限被拒绝（<em>Permission denied (publickey)</em>）</h4><p><strong>解决方案：</strong></p>
 <ol>
 <li><p><strong>检查并生成SSH密钥</strong></p>
