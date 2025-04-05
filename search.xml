@@ -1,73 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>电脑操作小技巧</title>
-    <url>/2025/04/05/%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7/</url>
-    <content><![CDATA[电脑操作小技巧解决文件夹进程占用与权限问题针对Windows 11家庭中文版中因进程占用或权限不足导致的文件夹删除难题，以下是结合系统原生命令的解决方案
-一、终止占用文件的进程（可选）如果文件夹被其他程序占用（如后台进程或病毒），需先终止相关进程：
-
-通过任务管理器手动结束进程（常规操作）
-
-鼠标右键单击任务栏，点击任务管理器，进而在“进程”栏中搜索并结束任务
-
-命令行终止进程（需管理员权限）：
-
-按win+R，输入cmd，进而按Ctrl+Shift+Enter以管理员权限打开
-
-taskkill /f /im &quot;进程名.exe&quot;  
-
-示例：若资源管理器占用，可重启资源管理器
-taskkill /f /im explorer.exe &amp;&amp; start explorer.exe  
-
-二、获取文件夹所有权并赋予完全控制权限通过CMD管理员命令强制获取权限：
-
-获取所有权：
-takeown /f &quot;文件夹路径&quot; /r /d y  
-
-
-/r：递归操作子文件
-/d y：静默确认（无需交互）
-
-
-赋予管理员完全控制权限：
-icacls &quot;文件夹路径&quot; /grant Administrators:F /t  
-
-
-/grant Administrators:F：授予管理员完全控制权
-
-/t：递归应用到子项
-
-
-
-
-三、强制删除文件夹CMD命令
-rd /s /q &quot;文件夹路径&quot;  
-
-参数解析：
-
-/s：删除文件夹及子内容
-/q：静默模式（无确认提示）
-
-Powershell指令takeown /f &quot;文件夹路径&quot; /r /d y  icacls &quot;文件夹路径&quot; /grant Administrators:F /t  Remove-Item -Path &quot;文件夹路径&quot; -Force -Recurse  
-
-扩展：解决深层权限问题的进阶命令若上述步骤仍失败，可尝试重置权限继承（修复权限混乱）
-icacls &quot;文件夹路径&quot; /reset /t /c /l  
-
-
-/reset：恢复默认权限
-/t：递归操作子项
-
-]]></content>
-      <categories>
-        <category>电脑操作</category>
-      </categories>
-      <tags>
-        <tag>技术</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo建站指南</title>
-    <url>/2025/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <url>/2025/04/04/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2.html</url>
     <content><![CDATA[Hexo建站全流程
 作为一名电脑小白，如何打造属于自己的个人博客网站呢？
 在这个流程中，我们将会学会Hexo建站的基本流程，即使是电脑小白也能轻易上手！
@@ -739,6 +674,71 @@ gitalk:  enable: true  clientID: &quot;你的GitHub应用ID&quot;  clientSecret:
       <tags>
         <tag>技术</tag>
         <tag>Hexo教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>电脑操作小技巧</title>
+    <url>/2025/04/05/%E7%94%B5%E8%84%91%E6%93%8D%E4%BD%9C%E5%B0%8F%E6%8A%80%E5%B7%A7.html</url>
+    <content><![CDATA[电脑操作小技巧解决文件夹进程占用与权限问题针对Windows 11家庭中文版中因进程占用或权限不足导致的文件夹删除难题，以下是结合系统原生命令的解决方案
+一、终止占用文件的进程（可选）如果文件夹被其他程序占用（如后台进程或病毒），需先终止相关进程：
+
+通过任务管理器手动结束进程（常规操作）
+
+鼠标右键单击任务栏，点击任务管理器，进而在“进程”栏中搜索并结束任务
+
+命令行终止进程（需管理员权限）：
+
+按win+R，输入cmd，进而按Ctrl+Shift+Enter以管理员权限打开
+
+taskkill /f /im &quot;进程名.exe&quot;  
+
+示例：若资源管理器占用，可重启资源管理器
+taskkill /f /im explorer.exe &amp;&amp; start explorer.exe  
+
+二、获取文件夹所有权并赋予完全控制权限通过CMD管理员命令强制获取权限：
+
+获取所有权：
+takeown /f &quot;文件夹路径&quot; /r /d y  
+
+
+/r：递归操作子文件
+/d y：静默确认（无需交互）
+
+
+赋予管理员完全控制权限：
+icacls &quot;文件夹路径&quot; /grant Administrators:F /t  
+
+
+/grant Administrators:F：授予管理员完全控制权
+
+/t：递归应用到子项
+
+
+
+
+三、强制删除文件夹CMD命令
+rd /s /q &quot;文件夹路径&quot;  
+
+参数解析：
+
+/s：删除文件夹及子内容
+/q：静默模式（无确认提示）
+
+Powershell指令takeown /f &quot;文件夹路径&quot; /r /d y  icacls &quot;文件夹路径&quot; /grant Administrators:F /t  Remove-Item -Path &quot;文件夹路径&quot; -Force -Recurse  
+
+扩展：解决深层权限问题的进阶命令若上述步骤仍失败，可尝试重置权限继承（修复权限混乱）
+icacls &quot;文件夹路径&quot; /reset /t /c /l  
+
+
+/reset：恢复默认权限
+/t：递归操作子项
+
+]]></content>
+      <categories>
+        <category>电脑操作</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
       </tags>
   </entry>
 </search>
